@@ -1,0 +1,331 @@
+/* START USER */
+
+.header-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.header-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.25rem;
+}
+
+.breadcrumb-custom {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-custom .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-custom .breadcrumb-item a:hover {
+    color: white;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: white;
+}
+
+.btn-add-user {
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-add-user:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(45deg, #ff5252, #ff9800);
+}
+
+.icon-bg {
+    background: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-stats {
+        justify-content: center;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+}
+
+/* END USER */
+
+/* START SUPPLIER */
+
+.header-section {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 50%, #20B2AA 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="supplier-grid" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M 15 0 L 0 0 0 15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23supplier-grid)"/></svg>');
+    opacity: 0.4;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.header-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.25rem;
+}
+
+.breadcrumb-custom {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-custom .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-custom .breadcrumb-item a:hover {
+    color: white;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: white;
+}
+
+.btn-add-supplier {
+    background: linear-gradient(45deg, #FF6B35, #F7931E);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-add-supplier:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(45deg, #FF5722, #FF9800);
+}
+
+.icon-bg {
+    background: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.supplier-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.supplier-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(46, 139, 87, 0.05);
+}
+
+.badge-supplier-code {
+    background: linear-gradient(45deg, #2E8B57, #3CB371);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-info i {
+    width: 16px;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-stats {
+        justify-content: center;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+}
+
+/* END SUPPLIER */
+
+
+
+/* START DETAIL BARANG MASUK */
+
+
+
+
+/* END DETAIL BARANG KELUAR */

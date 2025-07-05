@@ -1,0 +1,18 @@
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #765ba2 0%, #667eea 100%);
+}
+
+.stock-info {
+    font-size: 0.8em;
+    color: #666;
+}

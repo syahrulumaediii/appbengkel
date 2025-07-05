@@ -1,0 +1,323 @@
+/* CSS untuk efek hover transformation pada sidebar bengkel */
+
+        /* Styling dasar untuk sidebar */
+        .sidebar {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efek hover untuk sidebar container */
+        .sidebar:hover {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Efek hover untuk header bengkel */
+        .sidebar h4 {
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar h4:hover {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+            cursor: pointer;
+        }
+
+        /* Efek shimmer untuk header */
+        .sidebar h4::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+            z-index: 1;
+        }
+
+        .sidebar h4:hover::before {
+            left: 100%;
+        }
+
+        /* Pastikan text header tetap di atas */
+        .sidebar h4 * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efek hover untuk HR */
+        .sidebar hr {
+            transition: all 0.3s ease;
+            border-color: #95a5a6;
+        }
+
+        .sidebar:hover hr {
+            border-color: #3498db;
+            box-shadow: 0 1px 10px rgba(52, 152, 219, 0.5);
+            transform: scaleX(1.1);
+        }
+
+        /* Styling untuk nav-link */
+        .nav-link {
+            color: #ecf0f1 !important;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin: 3px 0;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Efek hover untuk nav-link */
+        .nav-link:hover {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            transform: translateX(15px) scale(1.02);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+            color: white !important;
+        }
+
+        /* Efek khusus untuk link aktif */
+        .nav-link.active {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .nav-link.active:hover {
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(231, 76, 60, 0.5);
+        }
+
+        /* Efek hover untuk icon */
+        .nav-link i {
+            transition: all 0.3s ease;
+            margin-right: 12px;
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-link:hover i {
+            transform: rotate(360deg) scale(1.3);
+            color: #fff;
+        }
+
+        /* Efek khusus untuk icon tertentu */
+        .nav-link[href*="dashboard"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #f39c12;
+        }
+
+        .nav-link[href*="user"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #27ae60;
+        }
+
+        .nav-link[href*="supplier"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #8e44ad;
+        }
+
+        .nav-link[href*="barang"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #f39c12;
+        }
+
+        .nav-link[href*="masuk"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #27ae60;
+        }
+
+        .nav-link[href*="keluar"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #e67e22;
+        }
+
+        .nav-link[href*="transaksi"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #9b59b6;
+        }
+
+        /* Efek khusus untuk logout */
+        .nav-link[href*="logout"] {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link[href*="logout"]:hover {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(231, 76, 60, 0.5);
+            border-color: #c0392b;
+        }
+
+        .nav-link[href*="logout"] i:hover {
+            transform: rotate(360deg) scale(1.3);
+            color: #fff;
+        }
+
+        /* Efek backdrop untuk semua nav-link */
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        /* Pastikan text dan icon tetap di atas backdrop */
+        .nav-link * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efek pulse untuk nav container */
+        .nav {
+            transition: all 0.3s ease;
+        }
+
+        .sidebar:hover .nav {
+            transform: translateZ(0);
+        }
+
+        /* Efek hover untuk container padding */
+        .sidebar .p-3 {
+            transition: all 0.3s ease;
+        }
+
+        .sidebar:hover .p-3 {
+            padding: 1.2rem !important;
+        }
+
+        /* Efek khusus untuk user management jika admin */
+        .nav-link[href*="user"]:hover {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        /* Animasi loading */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Efek focus untuk accessibility */
+        .nav-link:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+            transform: translateX(10px);
+        }
+
+        /* Responsive hover effects */
+        @media (max-width: 768px) {
+            .nav-link:hover {
+                transform: translateX(8px) scale(1.01);
+            }
+
+            .sidebar h4:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        /* Efek untuk screen besar */
+        @media (min-width: 1200px) {
+            .nav-link:hover {
+                transform: translateX(20px) scale(1.03);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Efek khusus untuk barang masuk */
+        .nav-link[href*="barang_masuk"]:hover {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        /* Efek khusus untuk barang keluar */
+        .nav-link[href*="barang_keluar"]:hover {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Efek glow untuk sidebar */
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .sidebar:hover::after {
+            opacity: 1;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .stat-card:hover,
+        .stat-card-success:hover,
+        .stat-card-info:hover,
+        .stat-card-warning:hover {
+            color: aliceblue;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 16px 0 rgba(85, 90, 146, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .stat-card-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .stat-card-warning {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .stat-card-info {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        /* END DASHBOARD */
